@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: url('./fundo-tela_inicial.jpeg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+
+}
+dialog{
+    width: 23vw;
+    height: 12vh;
+    background-color: white;
+    margin-left: 75%;
+    border-radius: 5px;
+   margin-top: -5vh;
+  border-style: none;
+   animation: fadeIn 0.4 ease forwards;
+ 
+  }
+ 
+  
+
+  .message_modal{ 
+    padding-top: 7%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+  }
+  .fa-times{
+    font-size: 40px;
+    color: red;
+    margin-left: 10px;
+  }
+  .message{
+    margin-left: 3%;
+    font-size: 20px;
+    font-weight: 300;
+
+  }
+ 
+   
+header {
+    justify-content: center;
+    align-items: center;
+   
+}
+#logo_nexus img{
+    width: 18rem;
+  
+}
+main{
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  height: 67vh;
+}
+#container {
+ width: 430px;
+ margin-left: 35vw;
+background-color: transparent;
+border: 2px solid rgba(255, 255, 255, .2);
+border-radius: 30px;
+color: white;
+padding: 30x 40px;
+box-shadow: 0 0 10px rgb(0, 0, 0);
+backdrop-filter: blur(5px);
+padding-top: 25px;
+}
+#container h1 {
+font-size: 30px;
+text-align: center;
+font-weight: 570;
+}
+.input-box {
+position: relative;
+width: 90%;
+height: 40px;
+margin: 25px 25px 25px 25px;
+}
+.input-box input {
+width: 95%;
+height: 95%;
+background-color: transparent;
+border: 2px solid rgba(255, 255, 255, .2);
+border-radius: 40px;
+
+outline: none;
+font-size: 15px;
+color: white;
+padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder {
+color: rgb(156, 156, 156);
+}
+.input-box i {
+position: absolute;
+right: 30px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 20px;
+}
+.remember-forgot {
+display: flex;
+justify-content: space-between;
+margin: -5px 0px 7px;
+padding-bottom: 17px;
+
+}
+.remember-forgot label input {
+accent-color: white;
+margin-left: 30px;
+}
+.remember-forgot a {
+text-decoration: none;
+color: white;
+margin: 15px 0 7px;
+margin-right: 35px;
+}
+.remember-forgot a:hover {
+text-decoration: underline;
+}
+.login {
+width: 90%;
+height: 40px;
+
+background-color: white;
+border: none;
+border-radius: 40px;
+cursor: pointer;
+font-size: 16px;
+color: rgb(41, 40, 40);
+font-weight: 600;
+box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+margin-left: 20px;
+}
+.reggister-link {
+font-size: 15px;
+text-align: center;
+margin: 20px 0 15px;
+}
+.reggister-link a {
+text-decoration: none;
+color: white;
+font-weight: 500;
+}
+.reggister-link a:hover {
+text-decoration: underline;
+}
+
+
+footer{
+  width: auto;
+
+}
+
+

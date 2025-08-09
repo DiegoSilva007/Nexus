@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    
+    }
+
+body{
+    background-image: url("./fundo-tela_inicial.jpeg");
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    justify-content: center;
+    align-items: center;
+}
+
+
+#logo_nexus img{
+    width: 18rem;
+  
+}
+#texto_boas_vindas{
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+    width: auto;
+    height: 80vh;
+    filter: none;
+    margin-left: -20vw;
+}
+
+
+#Title_boas_vindas{
+    color: white;
+    font-weight: 350;
+    font-size: 150%;
+
+    
+}
+#subtitle_boas_vindas{
+    color: white;
+    font-weight: 190;
+    font-size: 110%;
+}
+#buttons{
+    justify-content: center;
+    margin-left: 10vw;
+   margin-top: -90px;
+
+}
+#button_criar_conta{
+    width: 270%;
+    height: 8vh;
+  border-radius: 10px;
+  font-weight: 450;
+   background-color: white;
+   text-decoration: none;
+   font-size: 20px; 
+   color: black;
+}
+#button_criar_conta a{
+    text-decoration: none;
+
+   
+ 
+}
+#button_login{
+margin-top: 13px;
+width: 270%;
+height: 8vh;
+border-radius: 11px;
+text-decoration: none;
+background-color: transparent;
+border: 3px solid white;
+font-size: 20px;
+font-weight: 450; 
+color: white;
+}
+#button_login a{
+    text-decoration: none;
+ 
+}
+ 
+
+#container_tela_inicial{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+     margin-top: -7vh;
+}
+
+footer{
+    width: 100vw;
+
+  }

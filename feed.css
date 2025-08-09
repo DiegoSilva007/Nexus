@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: url('./fundo-tela_inicial.jpeg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+
+}
+dialog{
+    width: 20vw;
+    height: 12vh;
+    background-color: white;
+    margin-left: 78%;
+    border-radius: 5px;
+   margin-top: -5vh;
+  border-style: none;
+   animation: fadeIn 0.4 ease forwards;
+  }
+ 
+    
+
+  .message_modal{ 
+    padding-top: 7%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+  .fa-check{
+    font-size: 40px;
+    color: green;
+   
+    
+  }
+  .message{
+    margin-left: 5%;
+    font-size: 20px;
+   font-weight: 300;
+
+  }
+ 
+
+header {
+    justify-content: center;
+    align-items: center;
+   
+}
+#logo_nexus img{
+    width: 18rem;
+  
+}

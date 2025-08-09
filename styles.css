@@ -1,0 +1,588 @@
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           font-family: "Montserrat", sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: #262626;
+            max-width: 600px;
+            margin: 0 auto;
+            border-left: 1px solid #dbdbdb;
+            border-right: 1px solid #dbdbdb;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border-bottom: 1px solid #dbdbdb;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .back-btn {
+            font-size: 20px;
+            margin-right: 20px;
+            color: #262626;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .back-btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 16px;
+            background-color: white;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        
+        .profile-pic-container {
+            position: relative;
+            margin-bottom: 16px;
+        }
+        
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e1306c;
+            padding: 2px;
+        }
+        
+        .edit-pic-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #0095f6;
+            color: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        
+        .edit-pic-btn:hover {
+            transform: scale(1.1);
+            background-color: #007acc;
+        }
+        
+        .profile-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .profile-bio {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 12px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+        
+        .edit-profile-btn {
+            background-color: #efefef;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        
+        .edit-profile-btn:hover {
+            background-color: #dbdbdb;
+            transform: translateY(-1px);
+        }
+        
+        .edit-profile-btn:active {
+            transform: translateY(0);
+        }
+        
+        .create-post {
+            padding: 16px;
+            background-color: white;
+            border-bottom: 1px solid #dbdbdb;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .post-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #dbdbdb;
+            border-radius: 24px;
+            resize: none;
+            margin-bottom: 12px;
+            font-size: 15px;
+            transition: border-color 0.2s;
+        }
+        
+        .post-input:focus {
+            outline: none;
+            border-color: #a8a8a8;
+        }
+        
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .media-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .media-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #262626;
+            padding: 8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        
+        .media-btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .post-btn {
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        
+        .post-btn:disabled {
+            background-color: #b2dffc;
+            cursor: not-allowed;
+        }
+        
+        .post-btn:not(:disabled):hover {
+            background-color: #007acc;
+            transform: translateY(-1px);
+        }
+        
+        .post-btn:not(:disabled):active {
+            transform: translateY(0);
+        }
+        
+        .posts-container {
+            flex: 1;
+            padding: 0 12px;
+        }
+        
+        .post {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+        }
+        
+        .post-profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 12px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .post-profile-pic:hover {
+            transform: scale(1.05);
+        }
+        
+        .post-username {
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .post-content {
+            width: 100%;
+        }
+        
+        .post-text {
+            padding: 12px 16px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+        
+        .post-footer {
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #efefef;
+        }
+        
+        .post-actions-footer {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .post-action {
+            font-size: 24px;
+            color: #262626;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.2s;
+        }
+        
+        .post-action:hover {
+            transform: scale(1.1);
+        }
+        
+        .like-btn.liked {
+            color: #ed4956;
+        }
+        
+        .delete-post-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .post:hover .delete-post-btn {
+            opacity: 1;
+        }
+        
+        footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            background-color: white;
+            border-top: 1px solid #dbdbdb;
+            position: sticky;
+            bottom: 0;
+        }
+        
+        .footer-btn {
+            font-size: 22px;
+            color: #262626;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        
+        .footer-btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .footer-btn.active {
+            color: #0095f6;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 24px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 400px;
+            animation: modalOpen 0.3s ease-out;
+        }
+        
+        @keyframes modalOpen {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #dbdbdb;
+            border-radius: 12px;
+            font-size: 15px;
+            transition: border-color 0.2s;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #0095f6;
+        }
+        
+        .bio-input {
+            min-height: 80px;
+            resize: vertical;
+        }
+        
+        .file-input-container {
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        .file-input-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 2px dashed #dbdbdb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+        
+        .file-input-label:hover {
+            border-color: #0095f6;
+            background-color: #f8f8f8;
+        }
+        
+        .file-input-icon {
+            font-size: 32px;
+            color: #0095f6;
+            margin-bottom: 8px;
+        }
+        
+        .file-input-text {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
+        
+        .file-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .preview-container {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .preview-item {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .preview-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .remove-preview {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .modal-btn {
+            padding: 10px 20px;
+            border-radius: 24px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .cancel-btn {
+            background-color: #efefef;
+            color: #262626;
+        }
+        
+        .cancel-btn:hover {
+            background-color: #dbdbdb;
+        }
+        
+        .save-btn {
+            background-color: #0095f6;
+            color: white;
+        }
+        
+        .save-btn:hover {
+            background-color: #007acc;
+        }
+        
+        .no-posts {
+            text-align: center;
+            padding: 40px;
+            color: #8e8e8e;
+            font-size: 15px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .confirm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .confirm-content {
+            background-color: white;
+            padding: 24px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .confirm-message {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .confirm-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .confirm-btn {
+            padding: 10px 20px;
+            border-radius: 24px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .confirm-cancel {
+            background-color: #efefef;
+            color: #262626;
+        }
+        
+        .confirm-delete {
+            background-color: #ed4956;
+            color: white;
+        }

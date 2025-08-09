@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <button class="back-btn" id="backBtn">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <h1>Perfil</h1>
+    </header>
+    
+    <div class="profile-header">
+        <div class="profile-pic-container">
+            <img src="img/hello kitty.jpg" alt="Foto de perfil" class="profile-pic" id="profilePic">
+            <button class="edit-pic-btn" id="editPicBtn">
+                <i class="fas fa-camera"></i>
+            </button>
+        </div>
+        <h2 class="profile-name" id="profileName">Hello kitty</h2>
+        <p class="profile-bio" id="profileBio">Designer gráfica e amante de fotografia 📸 | Criando conteúdo digital</p>
+        <button class="edit-profile-btn" id="editProfileBtn">Editar Perfil</button>
+    </div>
+    
+    <div class="create-post">
+        <textarea class="post-input" placeholder="O que você está pensando?" id="postInput"></textarea>
+        <div class="post-actions">
+            <div class="media-buttons">
+                <button class="media-btn" id="photoBtn" title="Adicionar foto">
+                    <i class="far fa-image"></i>
+                </button>
+                <button class="media-btn" id="videoBtn" title="Adicionar vídeo">
+                    <i class="fas fa-video"></i>
+                </button>
+            </div>
+            <button class="post-btn" id="postBtn" disabled>Publicar</button>
+        </div>
+        <input type="file" id="mediaInput" accept="image/*,video/*" class="hidden">
+    </div>
+    
+    <div class="posts-container" id="postsContainer">
+        <div class="no-posts" id="noPosts">
+            <i class="far fa-newspaper"></i>
+            <p>Nenhuma publicação ainda</p>
+        </div>
+    </div>
+    
+    <footer>
+        <button class="footer-btn" title="Página Inicial">
+            <i class="fas fa-home"></i>
+        </button>
+        <button class="footer-btn" title="Explorar">
+            <i class="fas fa-search"></i>
+        </button>
+        <button class="footer-btn active" title="Nova Publicação">
+            <i class="far fa-plus-square"></i>
+        </button>
+        <button class="footer-btn" title="Atividade">
+            <i class="far fa-heart"></i>
+        </button>
+        <button class="footer-btn" title="Perfil">
+            <i class="far fa-user"></i>
+        </button>
+    </footer>
+    
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Editar Perfil</h3>
+            <div class="form-group">
+                <label for="newName" class="form-label">Nome de usuário</label>
+                <input type="text" class="form-input" id="newName">
+            </div>
+            <div class="form-group">
+                <label for="newBio" class="form-label">Biografia</label>
+                <textarea class="form-input bio-input" id="newBio" placeholder="Conte um pouco sobre você..."></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Foto de perfil</label>
+                <div class="file-input-container">
+                    <label class="file-input-label" id="fileInputLabel">
+                        <i class="fas fa-cloud-upload-alt file-input-icon"></i>
+                        <span class="file-input-text">Clique para enviar foto ou arraste aqui</span>
+                        <input type="file" class="file-input" id="newProfilePicFile" accept="image/*">
+                    </label>
+                </div>
+                <div class="preview-container" id="previewContainer"></div>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn cancel-btn" id="cancelEditProfile">Cancelar</button>
+                <button class="modal-btn save-btn" id="saveProfile">Salvar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="confirm-modal" id="confirmDeleteModal">
+        <div class="confirm-content">
+            <h3 class="modal-title">Excluir Publicação</h3>
+            <p class="confirm-message">Tem certeza que deseja excluir esta publicação? Esta ação não pode ser desfeita.</p>
+            <div class="confirm-actions">
+                <button class="confirm-btn confirm-cancel" id="cancelDeleteBtn">Cancelar</button>
+                <button class="confirm-btn confirm-delete" id="confirmDeleteBtn">Excluir</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+header{
+   justify-content: center;
+    align-items: center;
+}
+
+
+#container_recuperação{
+ width: 50%;
+ padding-bottom: 15px;
+ margin-left: auto;
+ margin-right: auto;
+background-color: transparent;
+border: 2px solid rgba(255, 255, 255, .2);
+border-radius: 30px;
+color: white;
+padding: 30x 40px;
+box-shadow: 0 0 10px rgb(0, 0, 0);
+backdrop-filter: blur(5px);
+padding-top: 25px;
+justify-content: center;
+align-items: center;
+}
+h1, h5{
+ margin-left: 20px;
+}
+i{
+   margin-right: 20px;
+}
+
+footer{
+    margin-top: 16%;
+}
