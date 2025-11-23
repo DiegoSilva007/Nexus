@@ -6,7 +6,7 @@ const user_password = document.querySelector("#senha");
 const user_age = document.querySelector("#aniversario");
 const modal_msg = document.querySelector(".message");
 const modal_cadastro = document.querySelector("#modal_cadastro");
-const base_url = "http://127.0.0.1:5000";
+const base_url = "https://tcc-api-411090032807.southamerica-east1.run.app";
 
 function Sign_Up() {
   const user_gender = document.querySelector(`input[name="genero"]:checked`);

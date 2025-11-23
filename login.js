@@ -1,7 +1,7 @@
 const username = document.querySelector(".name");
 const password = document.querySelector(".password");
 const modal = document.querySelector("#user_not_found");
-const base_url = "http://127.0.0.1:5000";
+const base_url = "https://tcc-api-411090032807.southamerica-east1.run.app";
 
 function login() {
   fetch(`${base_url}/Login/entrar`, {

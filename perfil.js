@@ -15,8 +15,8 @@ window.onload = function () {
 
 async function loadProfile() {
   const endpoint = profileId
-    ? `http://127.0.0.1:5000/api/Search/${profileId}`
-    : `http://127.0.0.1:5000/api/perfil/informacoes`;
+    ? `https://tcc-api-411090032807.southamerica-east1.run.app/api/Search/${profileId}`
+    : `https://tcc-api-411090032807.southamerica-east1.run.app/api/perfil/informacoes`;
 
   fetch(endpoint, {
     method: "GET",
@@ -74,7 +74,7 @@ function hideOwnerOptions() {
 function profile_edit() {
   if (profileId) return alert("Você não pode editar outro perfil!");
 
-  fetch("http://127.0.0.1:5000/api/perfil/edit", {
+  fetch("https://tcc-api-411090032807.southamerica-east1.run.app/api/perfil/edit", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
@@ -99,7 +99,7 @@ function publish() {
   const text = post_text.value.trim();
   if (!text) return alert("Digite algo antes de publicar!");
 
-  fetch("http://127.0.0.1:5000/api/Text_post/postagens", {
+  fetch("https://tcc-api-411090032807.southamerica-east1.run.app/api/Text_post/postagens", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     credentials: "include",
@@ -119,7 +119,7 @@ function deletePost(post_id) {
   if (profileId) return alert("Você não pode excluir posts de outro usuário!");
 
   if (confirm("Deseja mesmo excluir esta postagem?")) {
-    fetch(`http://127.0.0.1:5000/api/Text_post/delete-post/${post_id}`, {
+    fetch(`https://tcc-api-411090032807.southamerica-east1.run.app/api/Text_post/delete-post/${post_id}`, {
       method: "DELETE",
       credentials: "include",
     })
@@ -138,7 +138,7 @@ function deletePost(post_id) {
 
 // ====== Atualizar botão ao abrir perfil ======
 function follow_btn() {
-  fetch(`http://127.0.0.1:5000/api/Search/${profileId}`, {
+  fetch(`https://tcc-api-411090032807.southamerica-east1.run.app/api/Search/${profileId}`, {
     method: "GET",
     credentials: "include",
   })
@@ -159,7 +159,7 @@ function follow_btn() {
 
 // ====== Seguir ======
 function seguir(userId) {
-  fetch(`http://127.0.0.1:5000/api/Follow/${userId}`, {
+  fetch(`https://tcc-api-411090032807.southamerica-east1.run.app/api/Follow/${userId}`, {
     method: "POST",
     credentials: "include",
   })
@@ -181,7 +181,7 @@ function seguir(userId) {
 
 // ====== Deixar de seguir ======
 function deixarDeSeguir(userId) {
-  fetch(`http://127.0.0.1:5000/api/Unfollow/${userId}`, {
+  fetch(`https://tcc-api-411090032807.southamerica-east1.run.app/api/Unfollow/${userId}`, {
     method: "DELETE",
     credentials: "include",
   })

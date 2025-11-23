@@ -1,5 +1,5 @@
 // ======= CONFIGURAÇÃO BASE =======
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://tcc-api-411090032807.southamerica-east1.run.app";
 
 // ======= AO CARREGAR A PÁGINA =======
 window.addEventListener("DOMContentLoaded", carregarFeed);
