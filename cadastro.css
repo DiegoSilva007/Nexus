@@ -18,7 +18,7 @@
     align-items: center;
     
 }
-dialog .fa-exclamation{
+ .fa-exclamation{
   color: purple;
   font-size: 40px;
   margin-left: 15px;
@@ -152,17 +152,24 @@ dialog .fa-exclamation{
      box-shadow: 0 6px 12px purple; 
    } 
    #modal_cadastro{
-      width:30vw;
+      width: auto;
     height: auto;
     padding-top: 7px;
+    padding-bottom: 10px;
     padding-left: 4px;
+    padding-right: 50px ;
     background-color: white;
     padding-bottom: 7px;
-     margin-left: 70% ; 
+     margin-left: 72%;
     border-radius: 5px;
     margin-top: -5vh; 
   border-style: none;
    animation: fadeIn 0.4 ease forwards;
+   }
+   .fa-times{
+    color: rgb(185, 0, 0);
+    font-size: 40px;
+    margin-left: 15px;
    }
   .message_modal_key{
      font-weight: 450;

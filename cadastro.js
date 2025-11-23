@@ -1,13 +1,15 @@
 const user_name = document.getElementById("username");
+const icon = document.createElement("i");
+icon.className = "fas fa-times";
 const user_email = document.querySelector("#email");
 const user_password = document.querySelector("#senha");
 const user_age = document.querySelector("#aniversario");
-const user_gender = document.querySelector(".gender");
 const modal_msg = document.querySelector(".message");
 const modal_cadastro = document.querySelector("#modal_cadastro");
 const base_url = "http://127.0.0.1:5000";
 
 function Sign_Up() {
+  const user_gender = document.querySelector(`input[name="genero"]:checked`);
   fetch(`${base_url}/Cadastro/Criar_perfil`, {
     method: "POST",
     headers: {
@@ -20,11 +22,13 @@ function Sign_Up() {
       Password: user_password.value,
       Age: new Date(user_age.value).getFullYear(),
     }),
+    credentials: "include",
   })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
       if (data.mensagem_requisito1) {
+        modal_cadastro.appendChild = icon;
         modal_cadastro.textContent = data.mensagem_requisito1;
         modal_cadastro.show();
         setTimeout(() => modal_cadastro.close(), 3000);
@@ -45,7 +49,7 @@ function Sign_Up() {
         modal_cadastro.show();
         setTimeout(() => modal_cadastro.close(), 3000);
       } else {
-        window.location.href = "feed.html";
+        window.location.href = "login.html";
       }
     });
 }

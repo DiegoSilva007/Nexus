@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,27 +12,38 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="recuperação.css">
     <link href="./cadastro.html">
-    <title>Login</title>
+    <link href="./nova_senha.html">
+    <title>Nova Senha</title>
 </head>
 <body>
-  <header>
-            
-    <span id="logo_nexus">
+    <header>
+        <span id="logo_nexus">
      <a href="./Tela_inicial.html"><img src="./Logo-sem_fundo.png" alt=""></a>
- </span> 
-
-  <main> 
+    </header>
+    <main> 
     <div id="container_recuperação">
   <form>
-  <h1>Quem é você?</h1>
-    <h5 style="font-weight: 200;">Precismaos confirmar sua identidade. Digite sua chave de acesso para prosseguir</h5>
+  <h1>Crie uma nova senha</h1>
+    <h5 style="font-weight: 200;">Sua nova senha deve conter... <br>
+        <ul>
+            <li>
+                Números e Letras
+            </li>
+            <li>
+                Letras Maiusculas e Minusculas
+            </li>
+        </ul>
+    </h5>
   <div class="input-box">
-  <input class="password" placeholder="Chave de Acesso" type="password">
+  <input class="new_password" placeholder="Nova Senha" type="password">
   <i class="bx bxs-lock-alt"></i>
+  
+      <button type="reset" onclick="">Cria Senha</button>
+  
+  
   </div>
   </div>
-  </body>
- 
+  </main>
     <footer class="bg-black text-light py-4">
     <div class="container">
       <div class="row">
@@ -41,11 +52,9 @@
           
       <p> &copy; 2025 Nexus. Todos os direitos reservados.</p>
         </div>
-  
-       
+   
       </div>
     
   </footer>
-  </html>
-  <script src="login.js"></script>
-  <script src="feed.js">
+</body>
+</html>

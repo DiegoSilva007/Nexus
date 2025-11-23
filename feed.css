@@ -1,59 +1,320 @@
+/* ======= RESET ======= */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body {
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background: url('./fundo-tela_inicial.jpeg');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
 
-
+/* ======= BASE ======= */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #000;
+  color: #222;
+  overflow: hidden;
 }
-dialog{
-    width: 20vw;
-    height: 12vh;
-    background-color: white;
-    margin-left: 78%;
-    border-radius: 5px;
-   margin-top: -5vh;
+
+/* ======= CONTAINER ======= */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+.search-btn{
+  background: none;
+  font-size: 20px;
+  color: white;
   border-style: none;
-   animation: fadeIn 0.4 ease forwards;
-  }
- 
-    
-
-  .message_modal{ 
-    padding-top: 7%;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-  }
-  .fa-check{
-    font-size: 40px;
-    color: green;
-   
-    
-  }
-  .message{
-    margin-left: 5%;
-    font-size: 20px;
-   font-weight: 300;
-
-  }
- 
-
-header {
-    justify-content: center;
-    align-items: center;
-   
 }
-#logo_nexus img{
-    width: 18rem;
+/* ======= TOPBAR ======= */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 16px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+.logo_nexus {
+  width: 20%;
+}
+
+.logo_nexus img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.SearchAndProfile {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search-bar {
+  width: 60%;
+  min-width: 220px;
+  max-width: 500px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 1px solid #444;
+  background-color: #111;
+  color: #eee;
+  font-size: 15px;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #8257e6;
+  background-color: #181818;
+}
+
+.profile-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #8257e6;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.05);
+  border-color: #a174ff;
+}
+
+/* ======= FEED ======= */
+.feed {
+  flex-grow: 1;
+  width: 100%;
+  padding: 90px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow-y: auto;
+  background: #f4f4f4;
+}
+.comments-section, .comment-btn, .comment-input, .comment-list{
+  margin-top: 10px;
   
+}
+/* ======= POST ======= */
+.post {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post:first-child{
+  margin-top: 3%;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.like-btn{
+  border-style: none;
+  border: 1px solid  #6f3ce7;
+  background: none;
+  border-radius: 15px;
+  width: 90px;
+  font-size: 17px;
+  height: 30px;
+  text-align: center;
+}
+.like-btn:hover{
+  background-color: #6f3ce7;
+  color: white;
+  transition: 0.2s;
+}
+
+/* ======= CABEÇALHO ======= */
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+  border: 2px solid #8257e6;
+}
+
+.username {
+  font-weight: 600;
+  color: #111;
+  font-size: 18px;
+}
+
+/* ======= TEXTO ======= */
+.post-text {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+/* ======= IMAGEM DO POST ======= */
+.post-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+/* ======= AÇÕES ======= */
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.heart-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 8px 14px;
+  cursor: pointer;
+  color: #444;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.heart-btn:hover {
+  background-color: #ff4f4f;
+  color: #fff;
+  border-color: #ff4f4f;
+}
+
+.heart-btn.clicked {
+  background-color: #ff3b3b;
+  color: #fff;
+  border-color: #ff3b3b;
+}
+
+.like-count {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ======= COMENTÁRIOS ======= */
+.comment-section {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.comment-input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comment-input:focus {
+  border-color: #8257e6;
+  box-shadow: 0 0 0 2px rgba(130, 87, 230, 0.2);
+  outline: none;
+}
+
+.comment-btn {
+  background-color: #8257e6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  align-self: flex-end;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.comment-btn:hover {
+  background-color: #6f3ce7;
+  transform: translateY(-1px);
+}
+
+.comment-list {
+  list-style: none;
+  font-size: 14px;
+  color: #333;
+  padding-left: 5px;
+}
+
+.comment-list li {
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+}
+
+.comment-list li.no-comment {
+  background: transparent;
+  color: #777;
+  font-style: italic;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 65%;
+  }
+
+  .feed {
+    padding: 85px 10px 10px;
+  }
+
+  .post-image {
+    max-height: 300px;
+  }
+
+  .post {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .post-text {
+    font-size: 14px;
+  }
+
+  .heart-btn,
+  .comment-btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }

@@ -13,6 +13,7 @@ function login() {
       Name: username.value,
       Password: password.value,
     }),
+    credentials: "include",
   })
     .then((response) => response.json())
     .then((data) => {
