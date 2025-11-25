@@ -88,7 +88,7 @@ header {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #0095f6;
+  border: 3px solid #6f3ce7;
   padding: 2px;
   transition: transform 0.2s ease;
 }
@@ -101,7 +101,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #0095f6;
+  background-color: #6f3ce7;
   color: white;
   border-radius: 50%;
   width: 34px;
@@ -116,7 +116,7 @@ header {
 
 .edit-pic-btn:hover {
   transform: scale(1.1);
-  background-color: #007acc;
+  background-color: #6f3ce7;
 }
 
 .profile-name {
@@ -172,7 +172,7 @@ header {
 
 .post-input:focus {
   outline: none;
-  border-color: #0095f6;
+  border-color: #6f3ce7;
 }
 
 .post-actions {
@@ -206,7 +206,7 @@ header {
 }
 
 .post-btn {
-  background-color: #0095f6;
+  background-color: #6f3ce7;
   color: white;
   border: none;
   padding: 8px 24px;
@@ -222,7 +222,7 @@ header {
 }
 
 .post-btn:not(:disabled):hover {
-  background-color: #007acc;
+  background-color: #6f3ce7;
   transform: translateY(-1px);
 }
 
@@ -303,7 +303,7 @@ header {
 
 .post-action:hover {
   transform: scale(1.1);
-  color: #0095f6;
+  color: #6f3ce7;
 }
 
 .like-btn.liked {
